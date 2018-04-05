@@ -1,0 +1,22 @@
+{
+  "name": "next-test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next export && cd out && serve -p 8000",
+    "start:build": "next build && yarn start:static",
+    "start:server": "next start"
+  },
+  "dependencies": {
+    "bulma": "^0.6.2",
+    "next": "^5.1.0",
+    "react": "^16.3.1",
+    "react-dom": "^16.3.1"
+  },
+  "devDependencies": {
+    "serve": "^6.5.3"
+  }
+}
