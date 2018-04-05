@@ -225,7 +225,7 @@ module.exports = {
   exportPathMap: function exportPathMap(defaultPathMap) {
     // transform the list of posts into a map of pages with the pathname `/post/:id`
     var generatedPosts = postIDS.reduce(function (pages, post) {
-      return Object.assign({}, pages, _defineProperty({}, '/post/' + post, {
+      return _extends({}, pages, _defineProperty({}, '/post/' + post, {
         page: '/post',
         query: { id: post }
       }));
