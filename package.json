@@ -6,9 +6,10 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next export && cd out && serve -p 8000",
-    "start:build": "next build && yarn start:static",
-    "start:server": "next start"
+    "start": "yarn clean:out && next export && cd out && serve -p 8000",
+    "start:build": "next build && yarn start",
+    "start:server": "next start",
+    "clean:out": "rm -rf ./out"
   },
   "dependencies": {
     "bulma": "^0.6.2",
