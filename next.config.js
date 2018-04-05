@@ -1,8 +1,10 @@
+const postIDS = Array.from(new Array(3), (x, i) => i);
+
 module.exports = {
-  exportPathMap: function(defaultPathMap) {
-    const pageIDs = Array.from(new Array(3), (x, i) => i);
+  postIDS,
+  exportPathMap: (defaultPathMap) => {
     // transform the list of posts into a map of pages with the pathname `/post/:id`
-    const pages = pageIDs.reduce(
+    const generatedPosts = postIDS.reduce(
       (pages, post) =>
         Object.assign({}, pages, {
           [`/post/${post}`]: {
@@ -15,7 +17,7 @@ module.exports = {
 
     // combine the map of post pages with the home
     return {
-      ...pages,
+      ...generatedPosts,
       ...{ '/': { page: '/' } },
       ...{ '/about': { page: '/about' } },
     };
