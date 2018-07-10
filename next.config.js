@@ -2,6 +2,7 @@ const postIDS = Array.from(new Array(3), (x, i) => i);
 
 module.exports = {
   postIDS,
+  CONTENT: [`web-enabled,`, `capacity transmit,`, `Auto Loan Account,`],
   exportPathMap: (defaultPathMap) => {
     // transform the list of posts into a map of pages with the pathname `/post/:id`
     const generatedPosts = postIDS.reduce((pages, post) => {

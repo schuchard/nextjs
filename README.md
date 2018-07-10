@@ -7,3 +7,7 @@ Demo: https://next-react-static.firebaseapp.com/
 1. `yarn`
 1. `yarn start`
 1. `npm install -g firebase` - for deployment
+
+## Build static site
+
+1. `yarn start:static`

@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "yarn clean:out && next export && cd out && serve -p 8000",
-    "start:build": "next build && yarn start",
+    "export:serve": "yarn clean:out && next export && cd out && serve -p 8000",
+    "start:static": "next build && yarn export:serve",
     "start:server": "next start",
     "clean:out": "rm -rf ./out",
     "deploy": "next build && yarn clean:out && next export && firebase deploy"

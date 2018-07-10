@@ -15,7 +15,7 @@ export default class extends Component {
           {this.props.posts.map((id) => {
             return (
               <li>
-                <Link href={{ pathname: '/post', query: { id: id } }} as={`/post/${id}`}>
+                <Link href={{ pathname: '/post', query: { id } }} as={`/post/${id}`}>
                   <a>Read more...{id}</a>
                 </Link>
               </li>
